@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      "Hello World,日本語も可能",
+      "レイアウト作成開始",
       textDirection: TextDirection.ltr,
       style: TextStyle(
         fontSize: 32,
