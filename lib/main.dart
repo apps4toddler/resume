@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,38 +30,19 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
-                alignment: Alignment.topRight,
-                width: double.infinity,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Switch(
-                      value: _isLightMode,
-                      onChanged: (bool value) {
-                        setState(() {
-                          _isLightMode = value;
-                        });
-                      },
-                      activeThumbImage:
-                          const AssetImage("assets/images/icon-light.png"),
-                      inactiveThumbImage:
-                          const AssetImage("assets/images/icon-dark.png"),
-                    ),
-                    Switch(
-                      value: _isEnglish,
-                      onChanged: (bool value) {
-                        setState(() {
-                          _isEnglish = value;
-                        });
-                      },
-                      activeThumbImage:
-                          const AssetImage("assets/images/icon-en.png"),
-                      inactiveThumbImage:
-                          const AssetImage("assets/images/icon-jp.png"),
-                    ),
-                  ],
-                ),
+              Menu(
+                isLightMode: _isLightMode,
+                isEnglish: _isEnglish,
+                onToggleMode: (bool value) {
+                  setState(() {
+                    _isLightMode = value;
+                  });
+                },
+                onToggleLang: (bool value) {
+                  setState(() {
+                    _isEnglish = value;
+                  });
+                },
               ),
             ],
           ),
