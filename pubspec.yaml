@@ -69,6 +69,7 @@ flutter:
     - assets/images/icon-light.png
     - assets/images/icon-jp.png
     - assets/images/icon-en.png
+    - assets/images/profile.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
