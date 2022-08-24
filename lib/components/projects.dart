@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
 
+class ProjectItem {
+  String title;
+  String type;
+  String description;
+  String technologies;
+  ProjectItem(this.title, this.type, this.description, this.technologies);
+}
+
 class Projects extends StatelessWidget {
   final bool isLightMode;
   final bool isEnglish;
+
+  static List<ProjectItem> items = [
+    ProjectItem(
+      "Resume",
+      "Private",
+      "The resource you are currently on :)",
+      "Dart, Flutter",
+    ),
+  ];
 
   const Projects({
     Key? key,
@@ -50,16 +67,19 @@ class Projects extends StatelessWidget {
                           ),
                         ),
                         Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(
-                              top: 16,
-                              bottom: 16,
-                            ),
-                            child: Text(
-                              "Type",
-                              style: TextStyle(
-                                color: Colors.green,
-                                fontWeight: FontWeight.bold,
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                top: 16,
+                                bottom: 16,
+                              ),
+                              child: Text(
+                                "Type",
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
@@ -99,7 +119,7 @@ class Projects extends StatelessWidget {
                       ],
                     ),
                   ),
-                  for (var i = 0; i < 10; i++)
+                  for (var i = 0; i < items.length; i++)
                     Container(
                       decoration: const BoxDecoration(
                         border: Border(
@@ -112,16 +132,16 @@ class Projects extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Expanded(
+                          Expanded(
                             child: Padding(
-                              padding: EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                 top: 16,
                                 bottom: 16,
                                 right: 16,
                               ),
                               child: Text(
-                                "docuForce Mobile[iOS]",
-                                style: TextStyle(
+                                items[0].title,
+                                style: const TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
@@ -150,7 +170,7 @@ class Projects extends StatelessWidget {
                                     color: Colors.green.shade100,
                                   ),
                                   child: Text(
-                                    i % 2 == 0 ? "Commercial" : "Private",
+                                    items[i].type,
                                     style: const TextStyle(
                                       color: Colors.black,
                                     ),
@@ -159,29 +179,29 @@ class Projects extends StatelessWidget {
                               ),
                             ),
                           ),
-                          const Expanded(
+                          Expanded(
                             flex: 2,
                             child: Padding(
-                              padding: EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                 top: 16,
                                 bottom: 16,
                                 right: 16,
                               ),
                               child: Text(
-                                "The app for an online cinema with the ability to authorize, rate, comment and watch movies",
+                                items[i].description,
                               ),
                             ),
                           ),
-                          const Expanded(
+                          Expanded(
                             flex: 2,
                             child: Padding(
-                              padding: EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                 top: 16,
                                 bottom: 16,
                                 right: 16,
                               ),
                               child: Text(
-                                "Cordova, TypeScript, React, Redux, SASS/SCSS, Webpack",
+                                items[i].technologies,
                               ),
                             ),
                           ),
