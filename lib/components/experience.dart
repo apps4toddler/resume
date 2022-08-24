@@ -12,18 +12,62 @@ class Experience extends StatelessWidget {
   final bool isLightMode;
   final bool isEnglish;
 
+  // 1 January
+  // 2 February
+  // 3 March
+  // 4 April
+  // 5 May
+  // 6 June
+  // 7 July
+  // 8 August
+  // 9 September
+  //10 October
+  //11 November
+  //12 December
+
   static final List<ExperienceItem> experiences = [
-    ExperienceItem("Marchi 2020", "present", "Deloitte Digital", "Incubator"),
     ExperienceItem(
-        "Marchi 2018", "Marchi 2018", "Deloitte Digital", "Incubator"),
+      "March 2020",
+      "present",
+      "Deloitte Digital",
+      "Chief Engineer",
+    ),
     ExperienceItem(
-        "Marchi 2011", "Marchi 2018", "Deloitte Digital", "Incubator"),
+      "Marchi 2020",
+      "present",
+      "Deloitte ",
+      "Studio Senior Manager",
+    ),
     ExperienceItem(
-        "Marchi 2020", "Marchi 2018", "Deloitte Digital", "Incubator"),
+      "April 2016",
+      "March 2020",
+      "for Startup Ventures",
+      "Spot CTO & Parallels CTO",
+    ),
     ExperienceItem(
-        "Marchi 2020", "Marchi 2018", "Deloitte Digital", "Incubator"),
+      "Jly 2015",
+      "March 2020",
+      "Feel Sync System",
+      "VP Business Development",
+    ),
     ExperienceItem(
-        "Marchi 2020", "Marchi 2018", "Deloitte Digital", "Incubator"),
+      "April 2013",
+      "March 2015",
+      "Willgate Vietnum",
+      "CEO",
+    ),
+    ExperienceItem(
+      "April 2008",
+      "March 2015",
+      "Willgate",
+      "CTO",
+    ),
+    ExperienceItem(
+      "April 2003",
+      "March 2007",
+      "Fujitsu",
+      "Engineer",
+    ),
   ];
 
   const Experience({

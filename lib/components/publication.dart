@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Education extends StatelessWidget {
+class Publication extends StatelessWidget {
   final bool isLightMode;
   final bool isEnglish;
 
-  const Education({
+  const Publication({
     Key? key,
     required this.isLightMode,
     required this.isEnglish,
@@ -17,40 +17,36 @@ class Education extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Education", style: Theme.of(context).textTheme.headline6),
+          Text("Publication and Awards",
+              style: Theme.of(context).textTheme.headline6),
           const SizedBox(height: 16),
           const Text(
-            "National Institute of Technology, Tokyo College",
+            "Future of Cities",
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
           const Text(
-            "(1999-2003)",
+            "Forbes JAPAN [2022 publication]",
             style: TextStyle(
-              color: Colors.green,
-              fontWeight: FontWeight.bold,
+              color: Colors.grey,
             ),
           ),
           const SizedBox(height: 16),
           const Text(
-            "Faculty:",
+            "World Blockchain Summit Top 10 Project Leaders.",
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text("Mechanical Engineering"),
-          const SizedBox(height: 16),
           const Text(
-            "Specialty:",
+            "World Blockchain Summit Singapore [2019 award]",
             style: TextStyle(
-              color: Colors.green,
-              fontWeight: FontWeight.bold,
+              color: Colors.grey,
             ),
           ),
-          const Text("Management of emerging technology"),
         ],
       ),
     );

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:resume/components/introduction.dart';
+import 'package:resume/components/publication.dart';
 import './components/skills.dart';
 import './components/contacts.dart';
 import './components/experience.dart';
+import './components/projects.dart';
+import './components/education.dart';
 
 class Body extends StatelessWidget {
   final bool isLightMode;
@@ -93,13 +96,40 @@ class Body extends StatelessWidget {
                           flex: 10,
                           child: Column(
                             children: [
-                              Skills(
-                                isLightMode: isLightMode,
-                                isEnglish: isEnglish,
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: Skills(
+                                  isLightMode: isLightMode,
+                                  isEnglish: isEnglish,
+                                ),
                               ),
-                              Experience(
-                                isLightMode: isLightMode,
-                                isEnglish: isEnglish,
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: Education(
+                                  isLightMode: isLightMode,
+                                  isEnglish: isEnglish,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: Experience(
+                                  isLightMode: isLightMode,
+                                  isEnglish: isEnglish,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: Projects(
+                                  isLightMode: isLightMode,
+                                  isEnglish: isEnglish,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 32),
+                                child: Publication(
+                                  isLightMode: isLightMode,
+                                  isEnglish: isEnglish,
+                                ),
                               ),
                             ],
                           ),
