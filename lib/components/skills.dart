@@ -91,30 +91,31 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        alignment: Alignment.topLeft,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Technologies and skills",
-                style: Theme.of(context).textTheme.headline6),
-            Wrap(
-              children: [
-                for (var icon in icons)
-                  Padding(
-                    padding: const EdgeInsets.all(8),
+    return Container(
+      alignment: Alignment.topLeft,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Technologies and skills",
+              style: Theme.of(context).textTheme.headline6),
+          Wrap(
+            children: [
+              for (var icon in icons)
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Tooltip(
+                    message: icon,
                     child: SvgPicture.asset(
                       "assets/icons/icon-skill-$icon.svg",
-                      semanticsLabel: 'vscode',
+                      semanticsLabel: icon,
                       width: 40,
                       height: 40,
                     ),
                   ),
-              ],
-            ),
-          ],
-        ),
+                ),
+            ],
+          ),
+        ],
       ),
     );
   }

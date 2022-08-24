@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:resume/introduction.dart';
-import './skills.dart';
-import './contacts.dart';
+import 'package:resume/components/introduction.dart';
+import './components/skills.dart';
+import './components/contacts.dart';
+import './components/experience.dart';
 
 class Body extends StatelessWidget {
   final bool isLightMode;
@@ -67,14 +67,42 @@ class Body extends StatelessWidget {
                     margin: const EdgeInsets.only(top: 16),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Contacts(
-                          isLightMode: isLightMode,
-                          isEnglish: isEnglish,
+                      children: <Widget>[
+                        SizedBox(
+                          width: 250,
+                          child: Column(
+                            children: [
+                              Contacts(
+                                isLightMode: isLightMode,
+                                isEnglish: isEnglish,
+                              ),
+                              const SizedBox(height: 16),
+                              false
+                                  // ignore: dead_code
+                                  ? Skills(
+                                      isLightMode: isLightMode,
+                                      isEnglish: isEnglish,
+                                    )
+                                  : const SizedBox(
+                                      width: 0,
+                                    ),
+                            ],
+                          ),
                         ),
-                        Skills(
-                          isLightMode: isLightMode,
-                          isEnglish: isEnglish,
+                        Expanded(
+                          flex: 10,
+                          child: Column(
+                            children: [
+                              Skills(
+                                isLightMode: isLightMode,
+                                isEnglish: isEnglish,
+                              ),
+                              Experience(
+                                isLightMode: isLightMode,
+                                isEnglish: isEnglish,
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
