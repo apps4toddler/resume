@@ -6,12 +6,13 @@ class Menu extends StatelessWidget {
   final Function(bool)? onToggleMode;
   final Function(bool)? onToggleLang;
 
-  Menu({
+  const Menu({
+    Key? key,
     required this.isLightMode,
     required this.isEnglish,
     required this.onToggleMode,
     required this.onToggleLang,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

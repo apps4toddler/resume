@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 630 630" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1 0 0 1 77.5 0)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="443" x2="443" y1="0" y2="630">
+<stop offset="0" stop-color="#ebbb14"/>
+<stop offset="1" stop-color="#b25400"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 77.5 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="314" x2="314" y1="157" y2="630">
+<stop offset="0" stop-color="#f9e583"/>
+<stop offset="1" stop-color="#de9800"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 77.5 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_3" x1="187" x2="187" y1="315" y2="630">
+<stop offset="0" stop-color="#f9e68b"/>
+<stop offset="1" stop-color="#f3cd32"/>
+</linearGradient>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="630" width="630" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="PBI-Logo">
+<g opacity="1">
+<path d="M359.5 0L526.5 0C540.859-5.81145e-07 552.5 11.6406 552.5 26L552.5 604C552.5 618.359 540.859 630 526.5 630L359.5 630C345.141 630 333.5 618.359 333.5 604L333.5 26C333.5 11.6406 345.141-5.3445e-07 359.5 0Z" fill="url(#LinearGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<g opacity="1">
+<path d="M423.5 604L423.5 630L397.5 630L230.5 630C216.141 630 204.5 618.359 204.5 604L204.5 183C204.5 168.641 216.141 157 230.5 157L397.5 157C411.859 157 423.5 168.641 423.5 183L423.5 604Z" fill="#000000" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M423.5 604L423.5 630L397.5 630L230.5 630C216.141 630 204.5 618.359 204.5 604L204.5 183C204.5 168.641 216.141 157 230.5 157L397.5 157C411.859 157 423.5 168.641 423.5 183L423.5 604Z" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+<path d="M296.5 604L296.5 630L270.5 630L103.5 630C89.1406 630 77.5 618.359 77.5 604L77.5 341C77.5 326.641 89.1406 315 103.5 315L270.5 315C284.859 315 296.5 326.641 296.5 341L296.5 604Z" fill="url(#LinearGradient_3)" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</g>
+</svg>
