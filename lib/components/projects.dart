@@ -130,17 +130,6 @@ class Projects extends StatelessWidget {
         ),
       );
     }
-    // item.add(value);
-    //                     Row(
-    //                         children: [
-    //                           Text(items[i].title),
-    //                           Text(items[i].type),
-    //                           Text(items[i].description),
-    //                           Text(items[i].technologies),
-    //                         ],
-    //                       ),
-    //                     );
-    // return [Container()];
     return widgets;
   }
 
