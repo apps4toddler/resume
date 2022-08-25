@@ -22,7 +22,8 @@ class Contacts extends HookWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Contacts", style: Theme.of(context).textTheme.headline6),
+        Text("Contacts${MediaQuery.of(context).size.width}",
+            style: Theme.of(context).textTheme.headline6),
         Padding(
           padding: const EdgeInsets.only(
             top: 8,

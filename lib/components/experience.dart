@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resume/utils/deviceutil.dart';
 
 class ExperienceItem {
   String from;
@@ -94,10 +95,16 @@ class Experience extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        !isLarge(context)
+                            ? Expanded(flex: 1, child: Container())
+                            : Container(),
                         Expanded(
-                          child: i % 2 == 0
+                          flex: isLarge(context) ? 1 : 4,
+                          child: isLarge(context) && i % 2 == 0
                               ? Column(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  crossAxisAlignment: isLarge(context)
+                                      ? CrossAxisAlignment.end
+                                      : CrossAxisAlignment.start,
                                   children: [
                                     Container(
                                       padding: const EdgeInsets.only(
@@ -148,68 +155,128 @@ class Experience extends StatelessWidget {
                                     ),
                                   ],
                                 )
-                              : Container(),
+                              : !isLarge(context)
+                                  ? Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.only(
+                                            top: 4,
+                                            right: 16,
+                                            bottom: 4,
+                                            left: 16,
+                                          ),
+                                          decoration: const BoxDecoration(
+                                            border: Border(
+                                              bottom: BorderSide(
+                                                width: 3,
+                                                color: Colors.green,
+                                              ),
+                                            ),
+                                          ),
+                                          child: Text(
+                                            " ${experiences[i].from} - ${experiences[i].to}",
+                                            style: const TextStyle(
+                                              color: Colors.green,
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.only(
+                                            top: 8,
+                                            right: 16,
+                                            bottom: 4,
+                                            left: 16,
+                                          ),
+                                          child: Text(
+                                            experiences[i].place,
+                                          ),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.only(
+                                            top: 4,
+                                            right: 16,
+                                            bottom: 4,
+                                            left: 16,
+                                          ),
+                                          child: Text(
+                                            experiences[i].role,
+                                            style: const TextStyle(
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  : Container(),
                         ),
                         Container(
                           width: 8,
                           color: Colors.green,
+                          margin: !isLarge(context)
+                              ? const EdgeInsets.only(right: 32)
+                              : null,
                         ),
-                        Expanded(
-                          child: i % 2 == 1
-                              ? Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.only(
-                                        top: 4,
-                                        right: 16,
-                                        bottom: 4,
-                                        left: 16,
-                                      ),
-                                      decoration: const BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(
-                                            width: 3,
-                                            color: Colors.green,
+                        isLarge(context)
+                            ? Expanded(
+                                child: i % 2 == 1
+                                    ? Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              top: 4,
+                                              right: 16,
+                                              bottom: 4,
+                                              left: 16,
+                                            ),
+                                            decoration: const BoxDecoration(
+                                              border: Border(
+                                                bottom: BorderSide(
+                                                  width: 3,
+                                                  color: Colors.green,
+                                                ),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              " ${experiences[i].from} - ${experiences[i].to}",
+                                              style: const TextStyle(
+                                                color: Colors.green,
+                                              ),
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        " ${experiences[i].from} - ${experiences[i].to}",
-                                        style: const TextStyle(
-                                          color: Colors.green,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.only(
-                                        top: 8,
-                                        right: 16,
-                                        bottom: 4,
-                                        left: 16,
-                                      ),
-                                      child: Text(
-                                        experiences[i].place,
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.only(
-                                        top: 4,
-                                        right: 16,
-                                        bottom: 4,
-                                        left: 16,
-                                      ),
-                                      child: Text(
-                                        experiences[i].role,
-                                        style: const TextStyle(
-                                          color: Colors.grey,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                )
-                              : Container(),
-                        ),
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              top: 8,
+                                              right: 16,
+                                              bottom: 4,
+                                              left: 16,
+                                            ),
+                                            child: Text(
+                                              experiences[i].place,
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              top: 4,
+                                              right: 16,
+                                              bottom: 4,
+                                              left: 16,
+                                            ),
+                                            child: Text(
+                                              experiences[i].role,
+                                              style: const TextStyle(
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    : Container(),
+                              )
+                            : Container(),
                       ],
                     ),
                   ),
