@@ -6,6 +6,7 @@ import './components/contacts.dart';
 import './components/experience.dart';
 import './components/projects.dart';
 import './components/education.dart';
+import './utils/deviceutil.dart';
 
 class Body extends StatelessWidget {
   final bool isLightMode;
@@ -36,7 +37,7 @@ class Body extends StatelessWidget {
               )
             ],
           ),
-          margin: MediaQuery.of(context).size.width > 600
+          margin: isLarge(context)
               ? const EdgeInsets.only(
                   top: 0,
                   right: 16,
@@ -51,9 +52,8 @@ class Body extends StatelessWidget {
           ),
           width: double.infinity,
           child: Container(
-            alignment: MediaQuery.of(context).size.width > 600
-                ? Alignment.topLeft
-                : Alignment.topCenter,
+            alignment:
+                isLarge(context) ? Alignment.topLeft : Alignment.topCenter,
             padding: const EdgeInsets.all(
               16.0,
             ),
@@ -61,83 +61,160 @@ class Body extends StatelessWidget {
                 isLightMode ? const Color(0xffffffff) : const Color(0xff333333),
             child: SingleChildScrollView(
               child: Column(
-                children: [
-                  Introduction(
-                    isLightMode: isLightMode,
-                    isEnglish: isEnglish,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(top: 16),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SizedBox(
-                          width: 250,
-                          child: Column(
-                            children: [
-                              Contacts(
-                                isLightMode: isLightMode,
-                                isEnglish: isEnglish,
-                              ),
-                              const SizedBox(height: 16),
-                              false
-                                  // ignore: dead_code
-                                  ? Skills(
+                children: !isSmall(context)
+                    ? [
+                        Introduction(
+                          isLightMode: isLightMode,
+                          isEnglish: isEnglish,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 16),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              SizedBox(
+                                width: 250,
+                                child: Column(
+                                  children: [
+                                    Contacts(
                                       isLightMode: isLightMode,
                                       isEnglish: isEnglish,
-                                    )
-                                  : const SizedBox(
-                                      width: 0,
                                     ),
+                                    const SizedBox(height: 16),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 32),
+                                      child: Publication(
+                                        isLightMode: isLightMode,
+                                        isEnglish: isEnglish,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 16),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 32),
+                                      child: Education(
+                                        isLightMode: isLightMode,
+                                        isEnglish: isEnglish,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 16),
+                                    !(MediaQuery.of(context).size.width > 600)
+                                        // ignore: dead_code
+                                        ? Skills(
+                                            isLightMode: isLightMode,
+                                            isEnglish: isEnglish,
+                                          )
+                                        : const SizedBox(
+                                            width: 0,
+                                          ),
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                flex: 10,
+                                child: Column(
+                                  children: [
+                                    MediaQuery.of(context).size.width > 600
+                                        ? Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 32),
+                                            child: Skills(
+                                              isLightMode: isLightMode,
+                                              isEnglish: isEnglish,
+                                            ),
+                                          )
+                                        : Container(),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 32),
+                                      child: Experience(
+                                        isLightMode: isLightMode,
+                                        isEnglish: isEnglish,
+                                      ),
+                                    ),
+                                    !isPrjWidth(context)
+                                        ? Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 32),
+                                            child: Projects(
+                                              isLightMode: isLightMode,
+                                              isEnglish: isEnglish,
+                                            ),
+                                          )
+                                        : Container(),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
-                        Expanded(
-                          flex: 10,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 32),
-                                child: Skills(
-                                  isLightMode: isLightMode,
-                                  isEnglish: isEnglish,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 32),
-                                child: Education(
-                                  isLightMode: isLightMode,
-                                  isEnglish: isEnglish,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 32),
-                                child: Experience(
-                                  isLightMode: isLightMode,
-                                  isEnglish: isEnglish,
-                                ),
-                              ),
-                              Padding(
+                        isPrjWidth(context)
+                            ? Padding(
                                 padding: const EdgeInsets.only(bottom: 32),
                                 child: Projects(
                                   isLightMode: isLightMode,
                                   isEnglish: isEnglish,
                                 ),
-                              ),
-                              Padding(
+                              )
+                            : Container()
+                      ]
+                    : [
+                        Introduction(
+                          isLightMode: isLightMode,
+                          isEnglish: isEnglish,
+                        ),
+                        const SizedBox(height: 32),
+                        Contacts(
+                          isLightMode: isLightMode,
+                          isEnglish: isEnglish,
+                        ),
+                        const SizedBox(height: 16),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 32),
+                          child: Publication(
+                            isLightMode: isLightMode,
+                            isEnglish: isEnglish,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 32),
+                          child: Education(
+                            isLightMode: isLightMode,
+                            isEnglish: isEnglish,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Skills(
+                          isLightMode: isLightMode,
+                          isEnglish: isEnglish,
+                        ),
+                        const SizedBox(height: 16),
+                        isLarge(context)
+                            ? Padding(
                                 padding: const EdgeInsets.only(bottom: 32),
-                                child: Publication(
+                                child: Skills(
                                   isLightMode: isLightMode,
                                   isEnglish: isEnglish,
                                 ),
-                              ),
-                            ],
+                              )
+                            : Container(),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 32),
+                          child: Experience(
+                            isLightMode: isLightMode,
+                            isEnglish: isEnglish,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 32),
+                          child: Projects(
+                            isLightMode: isLightMode,
+                            isEnglish: isEnglish,
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                ],
               ),
             ),
           ),

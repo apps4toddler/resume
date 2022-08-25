@@ -98,6 +98,7 @@ class Skills extends StatelessWidget {
         children: [
           Text("Technologies and skills",
               style: Theme.of(context).textTheme.headline6),
+          const SizedBox(height: 16),
           Wrap(
             children: [
               for (var icon in icons)
