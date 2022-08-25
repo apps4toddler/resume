@@ -20,14 +20,14 @@ class Education extends StatelessWidget {
         children: [
           Text("Education".tr, style: Theme.of(context).textTheme.headline6),
           const SizedBox(height: 16),
-          const Text(
-            "National Institute of Technology, Tokyo College",
-            style: TextStyle(
+          SelectableText(
+            "National Institute of Technology, Tokyo College".tr,
+            style: const TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text(
+          const SelectableText(
             "(1999-2003)",
             style: TextStyle(
               color: Colors.green,
@@ -35,23 +35,23 @@ class Education extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          const Text(
-            "Faculty:",
-            style: TextStyle(
+          SelectableText(
+            "Faculty:".tr,
+            style: const TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text("Mechanical Engineering"),
+          SelectableText("Mechanical Engineering".tr),
           const SizedBox(height: 16),
-          const Text(
-            "Specialty:",
-            style: TextStyle(
+          SelectableText(
+            "Specialty:".tr,
+            style: const TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text("Management of emerging technology"),
+          SelectableText("Management of emerging technology".tr),
         ],
       ),
     );

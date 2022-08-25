@@ -21,30 +21,30 @@ class Publication extends StatelessWidget {
           Text("Publication and Awards".tr,
               style: Theme.of(context).textTheme.headline6),
           const SizedBox(height: 16),
-          const Text(
+          const SelectableText(
             "Future of Cities",
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text(
-            "Forbes JAPAN [2022 publication]",
-            style: TextStyle(
+          SelectableText(
+            "Forbes JAPAN [2022 publication]".tr,
+            style: const TextStyle(
               color: Colors.grey,
             ),
           ),
           const SizedBox(height: 16),
-          const Text(
+          const SelectableText(
             "World Blockchain Summit Top 10 Project Leaders.",
             style: TextStyle(
               color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Text(
-            "World Blockchain Summit Singapore [2019 award]",
-            style: TextStyle(
+          SelectableText(
+            "World Blockchain Summit Singapore [2019 award]".tr,
+            style: const TextStyle(
               color: Colors.grey,
             ),
           ),

@@ -23,6 +23,24 @@ class Worlds extends Translations {
           "Projects": "プロジェクト実績",
           "Publication and Awards": "出版及び受賞歴",
           "Technologies and skills": "技能一覧",
+          "National Institute of Technology, Tokyo College": "国立工業高等専門学校",
+          "Faculty:": "専攻:",
+          "Mechanical Engineering": "機械工学科",
+          "Specialty:": "専門:",
+          "Management of emerging technology":
+              "AI,Blockchain,xR,IoTを含む汎用先端技術に係る管理",
+          "Resume": "履歴書",
+          "Private": "私用",
+          "The resource you are currently on :)":
+              "現在閲覧頂いているページで、フルスクラッチで構築、レスポンシブデザイン、多言語、ダークモード/ライトモードに対応しています。",
+          "Title": "名前",
+          "Type": "種類",
+          "Description": "詳細",
+          "Technologies": "要素技術",
+          "Forbes JAPAN [2022 publication]": "フォーブス ジャパン [2022年 出版]",
+          "World Blockchain Summit Singapore [2019 award]":
+              "ワールドブロックチェーンサミットシンガポール [2019年 受賞]",
+          "present": "現在",
         },
         "en_US": {
           "My name is ": "My name is ",
@@ -46,6 +64,25 @@ class Worlds extends Translations {
           "Projects": "Projects",
           "Publication and Awards": "Publication and Awards",
           "Technologies and skills": "Technologies and skills",
+          "National Institute of Technology, Tokyo College":
+              "National Institute of Technology, Tokyo College",
+          "Faculty:": "Faculty:",
+          "Mechanical Engineering": "Mechanical Engineering",
+          "Specialty:": "Specialty:",
+          "Management of emerging technology":
+              "Management of emerging technology",
+          "Resume": "Resume",
+          "Private": "Private",
+          "The resource you are currently on :)":
+              "The resource you are currently on :)",
+          "Title": "Title",
+          "Type": "Type",
+          "Description": "Description",
+          "Technologies": "Technologies",
+          "Forbes JAPAN [2022 publication]": "Forbes JAPAN [2022 publication]",
+          "World Blockchain Summit Singapore [2019 award]":
+              "World Blockchain Summit Singapore [2019 award]",
+          "present": "present",
         },
       };
 }

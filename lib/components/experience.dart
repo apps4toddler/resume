@@ -30,13 +30,13 @@ class Experience extends StatelessWidget {
   static final List<ExperienceItem> experiences = [
     ExperienceItem(
       "March 2020",
-      "present",
+      "present".tr,
       "Deloitte Digital",
       "Chief Engineer",
     ),
     ExperienceItem(
       "Marchi 2020",
-      "present",
+      "present".tr,
       "Deloitte ",
       "Studio Senior Manager",
     ),
@@ -59,7 +59,7 @@ class Experience extends StatelessWidget {
       "CEO",
     ),
     ExperienceItem(
-      "April 2008",
+      "April 2007",
       "March 2015",
       "Willgate",
       "CTO",

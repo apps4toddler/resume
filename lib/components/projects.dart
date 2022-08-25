@@ -16,9 +16,9 @@ class Projects extends StatelessWidget {
 
   static List<ProjectItem> items = [
     ProjectItem(
-      "Resume",
-      "Private",
-      "The resource you are currently on :)",
+      "Resume".tr,
+      "Private".tr,
+      "The resource you are currently on :)".tr,
       "Dart, Flutter",
     ),
   ];
@@ -43,7 +43,7 @@ class Projects extends StatelessWidget {
               Expanded(
                 child: Align(
                   alignment: Alignment.topLeft,
-                  child: Text(
+                  child: SelectableText(
                     items[i].title,
                     style: const TextStyle(
                       color: Colors.green,
@@ -68,7 +68,7 @@ class Projects extends StatelessWidget {
                       ),
                       color: Colors.green.shade100,
                     ),
-                    child: Text(
+                    child: SelectableText(
                       items[i].type,
                       style: const TextStyle(
                         color: Colors.black,
@@ -89,10 +89,11 @@ class Projects extends StatelessWidget {
           padding: const EdgeInsets.only(
             top: 8,
             bottom: 8,
+            right: 32,
           ),
           child: Align(
             alignment: Alignment.topLeft,
-            child: Text(
+            child: SelectableText(
               items[i].description,
             ),
           ),
@@ -106,7 +107,7 @@ class Projects extends StatelessWidget {
           ),
           child: Align(
             alignment: Alignment.topLeft,
-            child: Text(
+            child: SelectableText(
               items[i].technologies,
               style: const TextStyle(
                 color: Colors.grey,
@@ -149,6 +150,9 @@ class Projects extends StatelessWidget {
                 children: !isSmall(context)
                     ? [
                         Container(
+                          margin: const EdgeInsets.only(
+                            right: 32,
+                          ),
                           decoration: const BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
@@ -158,16 +162,16 @@ class Projects extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            children: const [
+                            children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                     top: 16,
                                     bottom: 16,
                                   ),
                                   child: Text(
-                                    "Title",
-                                    style: TextStyle(
+                                    "Title".tr,
+                                    style: const TextStyle(
                                       color: Colors.green,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -178,13 +182,13 @@ class Projects extends StatelessWidget {
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: Padding(
-                                    padding: EdgeInsets.only(
+                                    padding: const EdgeInsets.only(
                                       top: 16,
                                       bottom: 16,
                                     ),
                                     child: Text(
-                                      "Type",
-                                      style: TextStyle(
+                                      "Type".tr,
+                                      style: const TextStyle(
                                         color: Colors.green,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -195,13 +199,13 @@ class Projects extends StatelessWidget {
                               Expanded(
                                 flex: 2,
                                 child: Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                     top: 16,
                                     bottom: 16,
                                   ),
                                   child: Text(
-                                    "Description",
-                                    style: TextStyle(
+                                    "Description".tr,
+                                    style: const TextStyle(
                                       color: Colors.green,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -211,13 +215,13 @@ class Projects extends StatelessWidget {
                               Expanded(
                                 flex: 2,
                                 child: Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                     top: 16,
                                     bottom: 16,
                                   ),
                                   child: Text(
-                                    "Technologies",
-                                    style: TextStyle(
+                                    "Technologies".tr,
+                                    style: const TextStyle(
                                       color: Colors.green,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -229,6 +233,9 @@ class Projects extends StatelessWidget {
                         ),
                         for (var i = 0; i < items.length; i++)
                           Container(
+                            margin: const EdgeInsets.only(
+                              right: 32,
+                            ),
                             decoration: const BoxDecoration(
                               border: Border(
                                 bottom: BorderSide(
@@ -247,7 +254,7 @@ class Projects extends StatelessWidget {
                                       bottom: 16,
                                       right: 16,
                                     ),
-                                    child: Text(
+                                    child: SelectableText(
                                       items[0].title,
                                       style: const TextStyle(
                                         color: Colors.grey,
@@ -277,7 +284,7 @@ class Projects extends StatelessWidget {
                                           ),
                                           color: Colors.green.shade100,
                                         ),
-                                        child: Text(
+                                        child: SelectableText(
                                           items[i].type,
                                           style: const TextStyle(
                                             color: Colors.black,
@@ -295,7 +302,7 @@ class Projects extends StatelessWidget {
                                       bottom: 16,
                                       right: 16,
                                     ),
-                                    child: Text(
+                                    child: SelectableText(
                                       items[i].description,
                                     ),
                                   ),
@@ -308,7 +315,7 @@ class Projects extends StatelessWidget {
                                       bottom: 16,
                                       right: 16,
                                     ),
-                                    child: Text(
+                                    child: SelectableText(
                                       items[i].technologies,
                                     ),
                                   ),
