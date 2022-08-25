@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import '../utils/deviceutil.dart';
 
 class Introduction extends StatelessWidget {
@@ -31,59 +32,64 @@ class Introduction extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SelectableText.rich(
+                          SelectableText.rich(
                             TextSpan(
                               children: [
-                                TextSpan(
+                                const TextSpan(
                                   text: "<Hello World!/>",
                                   style: TextStyle(color: Colors.green),
                                 ),
-                                TextSpan(
+                                const TextSpan(
                                   text: "\n\n",
                                 ),
                                 TextSpan(
-                                  text: "My name is ",
+                                  text: "My name is ".tr,
                                 ),
                                 TextSpan(
-                                  text: "Takuya Sato",
-                                  style: TextStyle(
+                                  text: "Takuya Sato".tr,
+                                  style: const TextStyle(
                                     color: Colors.green,
                                   ),
                                 ),
                                 TextSpan(
-                                  text: " and I'm ",
+                                  text: " and I'm ".tr,
                                 ),
                                 TextSpan(
                                   text:
-                                      "world class digital transformation partner",
-                                  style: TextStyle(
+                                      "world class digital transformation partner"
+                                          .tr,
+                                  style: const TextStyle(
                                     color: Colors.green,
                                   ),
                                 ),
                                 TextSpan(
                                   text:
-                                      "  for business owners solving social challenge.",
+                                      " for business owners solving social challenge."
+                                          .tr,
                                 ),
-                                TextSpan(text: "\n\n"),
+                                const TextSpan(text: "\n\n"),
                                 TextSpan(
                                   text:
-                                      "I definity believe that the future will be a wonderful world with digital innovation.",
+                                      "I definity believe that the future will be a wonderful world with digital innovation."
+                                          .tr,
                                 ),
-                                TextSpan(text: "\n\n"),
+                                const TextSpan(text: "\n\n"),
                                 TextSpan(
                                   text:
-                                      "My mission is technology innovation for this earth, so I'm going to provide leadership in emerging technology all over the world.",
+                                      "My mission is technology innovation for this earth, so I'm going to provide leadership in emerging technology all over the world."
+                                          .tr,
                                 ),
-                                TextSpan(text: "\n\n"),
+                                const TextSpan(text: "\n\n"),
                                 TextSpan(
                                   text:
-                                      "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path.",
+                                      "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path."
+                                          .tr,
                                 ),
-                                TextSpan(text: "\n\n"),
+                                const TextSpan(text: "\n\n"),
                                 TextSpan(
-                                  text: "At the moment I'm interested in:",
+                                  text: "At the moment I'm interested in:".tr,
                                 ),
-                                TextSpan(text: "\n"),
+                                const TextSpan(text: "\n"),
                               ],
                             ),
                           ),
@@ -137,58 +143,62 @@ class Introduction extends StatelessWidget {
                   const SizedBox(
                     height: 16,
                   ),
-                  const SelectableText.rich(
+                  SelectableText.rich(
                     TextSpan(
                       children: [
-                        TextSpan(
+                        const TextSpan(
                           text: "<Hello World!/>",
                           style: TextStyle(color: Colors.green),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: "\n\n",
                         ),
                         TextSpan(
-                          text: "My name is ",
+                          text: "My name is ".tr,
                         ),
                         TextSpan(
-                          text: "Takuya Sato",
-                          style: TextStyle(
+                          text: "Takuya Sato".tr,
+                          style: const TextStyle(
                             color: Colors.green,
                           ),
                         ),
                         TextSpan(
-                          text: " and I'm ",
+                          text: " and I'm ".tr,
                         ),
                         TextSpan(
-                          text: "world class digital transformation partner",
-                          style: TextStyle(
+                          text: "world class digital transformation partner".tr,
+                          style: const TextStyle(
                             color: Colors.green,
                           ),
                         ),
                         TextSpan(
                           text:
-                              "  for business owners solving social challenge.",
+                              "  for business owners solving social challenge."
+                                  .tr,
                         ),
-                        TextSpan(text: "\n\n"),
+                        const TextSpan(text: "\n\n"),
                         TextSpan(
                           text:
-                              "I definity believe that the future will be a wonderful world with digital innovation.",
+                              "I definity believe that the future will be a wonderful world with digital innovation."
+                                  .tr,
                         ),
-                        TextSpan(text: "\n\n"),
+                        const TextSpan(text: "\n\n"),
                         TextSpan(
                           text:
-                              "My mission is technology innovation for this earth, so I'm going to provide leadership in emerging technology all over the world.",
+                              "My mission is technology innovation for this earth, so I'm going to provide leadership in emerging technology all over the world."
+                                  .tr,
                         ),
-                        TextSpan(text: "\n\n"),
+                        const TextSpan(text: "\n\n"),
                         TextSpan(
                           text:
-                              "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path.",
+                              "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path."
+                                  .tr,
                         ),
-                        TextSpan(text: "\n\n"),
+                        const TextSpan(text: "\n\n"),
                         TextSpan(
-                          text: "At the moment I'm interested in:",
+                          text: "At the moment I'm interested in:".tr,
                         ),
-                        TextSpan(text: "\n"),
+                        const TextSpan(text: "\n"),
                       ],
                     ),
                   ),

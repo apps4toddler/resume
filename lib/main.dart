@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:desktop_window/desktop_window.dart' as window_size;
+import 'package:get/route_manager.dart';
 import 'package:window_manager/window_manager.dart';
 import './menu.dart';
 import './body.dart';
 import 'dart:io';
+
+import './lang/worlds.dart';
 
 void main() async {
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
@@ -13,7 +16,14 @@ void main() async {
     window_size.DesktopWindow.setMinWindowSize(const Size(300, 450));
     // window_size.DesktopWindow.setMaxWindowSize(const Size(600, 1000));
   }
-  runApp(const MyApp());
+  runApp(
+    GetMaterialApp(
+      home: const MyApp(),
+      translations: Worlds(),
+      locale: const Locale("ja", "JP"),
+      fallbackLocale: const Locale("ja", "JP"),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -27,7 +37,7 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
   bool _isLightMode = false;
   bool _isEnglish = false;
   @override
-  Widget build(BuildContext _context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -58,6 +68,11 @@ class MyAppState extends State<MyApp> with TickerProviderStateMixin {
                       setState(() {
                         _isEnglish = value;
                       });
+                      Get.updateLocale(
+                        _isEnglish
+                            ? const Locale('en', 'US')
+                            : const Locale('ja', 'JP'),
+                      );
                     },
                   ),
                   Body(

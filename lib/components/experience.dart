@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:resume/utils/deviceutil.dart';
 
 class ExperienceItem {
@@ -29,13 +30,13 @@ class Experience extends StatelessWidget {
   static final List<ExperienceItem> experiences = [
     ExperienceItem(
       "March 2020",
-      "present",
+      "present".tr,
       "Deloitte Digital",
       "Chief Engineer",
     ),
     ExperienceItem(
       "Marchi 2020",
-      "present",
+      "present".tr,
       "Deloitte ",
       "Studio Senior Manager",
     ),
@@ -58,7 +59,7 @@ class Experience extends StatelessWidget {
       "CEO",
     ),
     ExperienceItem(
-      "April 2008",
+      "April 2007",
       "March 2015",
       "Willgate",
       "CTO",
@@ -85,7 +86,7 @@ class Experience extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Professional experience",
+          Text("Professional experience".tr,
               style: Theme.of(context).textTheme.headline6),
           Center(
             child: Column(
