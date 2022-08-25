@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Education extends StatelessWidget {
   final bool isLightMode;
@@ -17,7 +18,7 @@ class Education extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Education", style: Theme.of(context).textTheme.headline6),
+          Text("Education".tr, style: Theme.of(context).textTheme.headline6),
           const SizedBox(height: 16),
           const Text(
             "National Institute of Technology, Tokyo College",

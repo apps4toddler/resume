@@ -16,7 +16,13 @@ class Worlds extends Translations {
               "地球の為になる技術革新が我が使命という認識のもとで、世界中の先端技術でリーダーシップを発揮していきたいと考えています。",
           "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path.":
               "既に達成したことにこだわりすぎることなく、効率化や発展を見据えて常に新しいことを真摯に学び、挑戦し続けていきます。",
-          "At the moment I'm interested in:": "現在の私の探求技術領域：",
+          "At the moment I'm interested in:": "現在の主な探求技術領域：",
+          "Contacts": "連絡先",
+          "Education": "学歴",
+          "Professional experience": "職歴",
+          "Projects": "プロジェクト実績",
+          "Publication and Awards": "出版及び受賞歴",
+          "Technologies and skills": "技能一覧",
         },
         "en_US": {
           "My name is ": "My name is ",
@@ -34,6 +40,12 @@ class Worlds extends Translations {
               "And now I try not to dwell on what I've already achieved, therefore I'm constantly learning something new in order to further develop in the closen path.",
           "At the moment I'm interested in:":
               "At the moment I'm interested in:",
+          "Contacts": "Contacts",
+          "Education": "Education",
+          "Professional experience": "Professional experience",
+          "Projects": "Projects",
+          "Publication and Awards": "Publication and Awards",
+          "Technologies and skills": "Technologies and skills",
         },
       };
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:resume/utils/deviceutil.dart';
 
 class ExperienceItem {
@@ -85,7 +86,7 @@ class Experience extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Professional experience",
+          Text("Professional experience".tr,
               style: Theme.of(context).textTheme.headline6),
           Center(
             child: Column(

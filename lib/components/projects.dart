@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../utils/deviceutil.dart';
 
 class ProjectItem {
@@ -141,7 +142,7 @@ class Projects extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Projects", style: Theme.of(context).textTheme.headline6),
+          Text("Projects".tr, style: Theme.of(context).textTheme.headline6),
           Container(
             alignment: Alignment.topLeft,
             child: Column(

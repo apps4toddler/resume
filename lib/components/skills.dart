@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class Skills extends StatelessWidget {
   final bool isLightMode;
@@ -96,7 +97,7 @@ class Skills extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Technologies and skills",
+          Text("Technologies and skills".tr,
               style: Theme.of(context).textTheme.headline6),
           const SizedBox(height: 16),
           Wrap(
